@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrunkFlow - Distribuidora de Bebidas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>DrunkFlow</h1>
+        </div>
+
+        <div class="header-center">
+            <form class="search-form" role="search" aria-label="Buscar produtos">
+                <input type="search" id="search-input" placeholder="Buscar produtos, marcas ou categorias..." aria-label="Campo de busca" autocomplete="off">
+                <button type="button" id="search-btn" aria-label="Executar busca">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 21L16.5 16.5M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div id="search-results" class="search-results" aria-live="polite" aria-atomic="true"></div>
+            </form>
+        </div>
+
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <button type="button" id="cart-btn" class="cart-btn" aria-label="Carrinho de compras">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span id="carrinho-badge" class="cart-badge">0</span>
+            </button>
+            <button type="button" id="login-btn" class="btn-login" aria-label="Iniciar sessão">Iniciar Sessão</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="section-hero">
+            <div class="container">
+                <h2>Bem-vindo à DrunkFlow</h2>
+                <p class="intro-text">Descubra nossa seleção exclusiva de bebidas de alta qualidade</p>
+                
+                <section id="amostra-produtos" class="section-amostra">
+                    <h3>Produtos em Destaque</h3>
+                    <ul class="produtos-lista">
+                        <li class="produto">
+                            <article>
+                                <div class="produto-imagem-container">
+                                    <img src="imagens/brahma-lata.webp" alt="Cerveja Brahma Chopp" class="produto-imagem" onclick="galeria.abrirLightbox(this.src, 'Cerveja Brahma Chopp')">
+                                    <span class="produto-anuncio">PROMOÇÃO</span>
+                                </div>
+                                <h4>Cerveja Brahma Chopp</h4>
+                                <p>Cerveja pilsen premium, refrescante e leve</p>
+                                <div class="produto-info">
+                                    <span class="preco">R$ 3,50</span>
+                                    <span class="volume">350ml</span>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="produto destaque">
+                            <article>
+                                <div class="produto-imagem-container">
+                                    <img src="imagens/chileno-chilano-cabernet-sauvignon-vivavinho.png.png" alt="Vinho Chileno Cabernet Sauvignon" class="produto-imagem" onclick="galeria.abrirLightbox(this.src, 'Vinho Chileno Cabernet Sauvignon')">
+                                    <span class="produto-anuncio destaque-banner">DESTAQUE</span>
+                                </div>
+                                <h4>Vinho Chileno Cabernet Sauvignon</h4>
+                                <p>Vinho tinto encorpado com taninos suaves</p>
+                                <div class="produto-info">
+                                    <span class="preco">R$ 45,00</span>
+                                    <span class="volume">750ml</span>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="produto">
+                            <article>
+                                <div class="produto-imagem-container">
+                                    <img src="imagens/RedLabel.webp" alt="Whisky Johnnie Walker Red Label" class="produto-imagem" onclick="galeria.abrirLightbox(this.src, 'Whisky Johnnie Walker Red Label')">
+                                    <span class="produto-anuncio">NOVO</span>
+                                </div>
+                                <h4>Whisky Johnnie Walker Red Label</h4>
+                                <p>Whisky escocês blended, suave e acessível</p>
+                                <div class="produto-info">
+                                    <span class="preco">R$ 120,00</span>
+                                    <span class="volume">750ml</span>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="produto">
+                            <article>
+                                <div class="produto-imagem-container">
+                                    <img src="imagens/cocacola.jpg" alt="Coca-Cola" class="produto-imagem" onclick="galeria.abrirLightbox(this.src, 'Coca-Cola')">
+                                    <span class="produto-anuncio">BEBIDA</span>
+                                </div>
+                                <h4>Coca-Cola</h4>
+                                <p>Refrigerante cola clássico, refrescante</p>
+                                <div class="produto-info">
+                                    <span class="preco">R$ 4,50</span>
+                                    <span class="volume">350ml</span>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="produto">
+                            <article>
+                                <div class="produto-imagem-container">
+                                    <img src="imagens/heineken.webp" alt="Cerveja Heineken Premium" class="produto-imagem" onclick="galeria.abrirLightbox(this.src, 'Cerveja Heineken Premium')">
+                                    <span class="produto-anuncio">PROMOÇÃO</span>
+                                </div>
+                                <h4>Cerveja Heineken Premium</h4>
+                                <p>Cerveja importada holandesa, sabor único</p>
+                                <div class="produto-info">
+                                    <span class="preco">R$ 4,80</span>
+                                    <span class="volume">350ml</span>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="produto destaque">
+                            <article>
+                                <div class="produto-imagem-container">
+                                    <img src="imagens/catena.webp" alt="Vinho Argentino Malbec" class="produto-imagem" onclick="galeria.abrirLightbox(this.src, 'Vinho Argentino Malbec')">
+                                    <span class="produto-anuncio destaque-banner">DESTAQUE</span>
+                                </div>
+                                <h4>Vinho Argentino Malbec</h4>
+                                <p>Vinho tinto intenso com frutas vermelhas</p>
+                                <div class="produto-info">
+                                    <span class="preco">R$ 52,00</span>
+                                    <span class="volume">750ml</span>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="produto">
+                            <article>
+                                <div class="produto-imagem-container">
+                                    <img src="imagens/artesanal.webp" alt="Cachaça Artesanal Premium" class="produto-imagem" onclick="galeria.abrirLightbox(this.src, 'Cachaça Artesanal Premium')">
+                                    <span class="produto-anuncio">NOVO</span>
+                                </div>
+                                <h4>Cachaça Artesanal Premium</h4>
+                                <p>Cachaça brasileira destilada artesanalmente</p>
+                                <div class="produto-info">
+                                    <span class="preco">R$ 65,00</span>
+                                    <span class="volume">750ml</span>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="produto">
+                            <article>
+                                <div class="produto-imagem-container">
+                                    <img src="imagens/suco.png" alt="Suco Natural de Laranja" class="produto-imagem" onclick="galeria.abrirLightbox(this.src, 'Suco Natural de Laranja')">
+                                    <span class="produto-anuncio">NATURAL</span>
+                                </div>
+                                <h4>Suco Natural de Laranja</h4>
+                                <p>Suco 100% natural, sem conservantes</p>
+                                <div class="produto-info">
+                                    <span class="preco">R$ 6,50</span>
+                                    <span class="volume">500ml</span>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="produto">
+                            <article>
+                                <div class="produto-imagem-container">
+                                    <img src="imagens/puromalte.webp" alt="Cerveja Skol Puro Malte" class="produto-imagem" onclick="galeria.abrirLightbox(this.src, 'Cerveja Skol Puro Malte')">
+                                    <span class="produto-anuncio">PROMOÇÃO</span>
+                                </div>
+                                <h4>Cerveja Skol Puro Malte</h4>
+                                <p>Cerveja brasileira com sabor suave</p>
+                                <div class="produto-info">
+                                    <span class="preco">R$ 3,20</span>
+                                    <span class="volume">350ml</span>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+                
+                <a href="produtos.html" class="btn-principal">Ver Nossos Produtos</a>
+            </div>
+        </section>
+
+        <section id="sobre" class="section-sobre">
+            <div class="container">
+                <h2>Sobre Nós</h2>
+                <ul class="sobre-lista">
+                    <li>Empresa especializada em distribuição de bebidas com foco em qualidade e atendimento personalizado</li>
+                    <li>Trabalhamos com as melhores marcas do mercado</li>
+                    <li>Oferecemos condições especiais para estabelecimentos comerciais</li>
+                    <li><strong>Missão:</strong> Levar as melhores bebidas até seu negócio com eficiência e qualidade</li>
+                </ul>
+            </div>
+        </section>
+        <section id="contato" class="section-contato">
+            <div class="container">
+                <h2>Contato</h2>
+                <address class="contact-info">
+                    <p><strong>Email:</strong> contato@drunkflow.com.br</p>
+                    <p><strong>Telefone:</strong> (11) 3333-4444 | <strong>WhatsApp:</strong> (11) 99999-8888</p>
+                    <p><strong>Endereço:</strong> Avenida Paulista, 1578 - Bela Vista - São Paulo, SP - CEP: 01311-200</p>
+                </address>
+
+                <form class="form-contato" method="POST" action="#">
+                    <fieldset>
+                        <legend>Envie-nos uma Mensagem</legend>
+                        
+                        <div class="form-group">
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem:</label>
+                            <textarea id="mensagem" name="mensagem" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-enviar">Enviar</button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-info">
+                <p>&copy; 2026 DrunkFlow Distribuidora. Todos os direitos reservados.</p>
+                <p>CNPJ: 12.345.678/0001-90 | Inscrição Estadual: 123.456.789.012</p>
+            </div>
+            <nav aria-label="Redes sociais" class="footer-sociais">
+                <ul>
+                    <li><a href="https://facebook.com/drunkflowbr" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                    <li><a href="https://instagram.com/drunkflow.br" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    <li><a href="https://twitter.com/drunkflowbr" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

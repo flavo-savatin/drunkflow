@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - DrunkFlow Distribuidora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <h1>DrunkFlow</h1>
+        </div>
+
+        <div class="header-center">
+            <form class="search-form" role="search" aria-label="Buscar produtos">
+                <input type="search" id="search-input" placeholder="Buscar produtos, marcas ou categorias..." aria-label="Campo de busca" autocomplete="off">
+                <button type="button" id="search-btn" aria-label="Executar busca">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M21 21L16.5 16.5M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div id="search-results" class="search-results" aria-live="polite" aria-atomic="true"></div>
+            </form>
+        </div>
+
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="produtos.html" class="ativo">Produtos</a></li>
+                <li><a href="index.html#sobre">Sobre Nós</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <button type="button" id="cart-btn" class="cart-btn" aria-label="Abrir carrinho de compras">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span id="carrinho-badge" class="cart-badge" aria-label="Itens no carrinho">0</span>
+            </button>
+            <button type="button" id="login-btn" class="btn-login" aria-label="Iniciar sessão">Iniciar Sessão</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="catalogo" class="section-catalogo">
+            <div class="container">
+                <h2>Catálogo de Produtos</h2>
+                <p class="intro-catalogo">Explore nossa completa seleção de bebidas variadas</p>
+
+                <section class="categoria" id="categoria-cervejas">
+                    <h3 class="categoria-titulo">🍺 Cervejas</h3>
+                    <ul class="produtos-lista">
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Cerveja Brahma Chopp</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="brahma" name="produto" value="brahma">
+                                        <label for="brahma">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Cerveja pilsen premium, refrescante e leve</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 3,50</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">350ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Cerveja Skol</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="skol" name="produto" value="skol">
+                                        <label for="skol">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Cerveja pilsen tradicional brasileira</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 3,20</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">350ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Cerveja Antarctica Original</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="antarctica" name="produto" value="antarctica">
+                                        <label for="antarctica">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Cerveja pilsen com sabor único</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 3,80</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">350ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Cerveja Heineken</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="heineken" name="produto" value="heineken">
+                                        <label for="heineken">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Cerveja premium holandesa</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 5,50</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">350ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Cerveja Stella Artois</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="stella" name="produto" value="stella">
+                                        <label for="stella">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Cerveja belga premium</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 6,20</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">350ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Cerveja Corona Extra</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="corona" name="produto" value="corona">
+                                        <label for="corona">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Cerveja mexicana com limão</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 7,80</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">355ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Cerveja Budweiser</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="budweiser" name="produto" value="budweiser">
+                                        <label for="budweiser">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Cerveja americana premium</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 5,90</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">350ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Cerveja Itaipava</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="itaipava" name="produto" value="itaipava">
+                                        <label for="itaipava">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Cerveja pilsen acessível</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 2,80</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">350ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="categoria" id="categoria-vinhos">
+                    <h3 class="categoria-titulo">🍷 Vinhos</h3>
+                    <ul class="produtos-lista">
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Vinho Chileno Cabernet Sauvignon</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="cabernet" name="produto" value="cabernet">
+                                        <label for="cabernet">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Vinho tinto encorpado com taninos suaves</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 45,00</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">750ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Vinho Argentino Malbec</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="malbec" name="produto" value="malbec">
+                                        <label for="malbec">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Vinho tinto argentino com frutas vermelhas</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 52,00</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">750ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Vinho Branco Chardonnay</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="chardonnay" name="produto" value="chardonnay">
+                                        <label for="chardonnay">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Vinho branco leve e frutado</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 38,00</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">750ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Vinho Rosé Provence</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="rose" name="produto" value="rose">
+                                        <label for="rose">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Vinho rosé francês refrescante</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 65,00</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">750ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Vinho Italiano Sangiovese</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="sangiovese" name="produto" value="sangiovese">
+                                        <label for="sangiovese">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Vinho tinto italiano clássico</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 58,00</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">750ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Vinho Alemão Riesling</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="riesling" name="produto" value="riesling">
+                                        <label for="riesling">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Vinho branco alemão semi-seco</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 72,00</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">750ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="categoria" id="categoria-destilados">
+                    <h3 class="categoria-titulo">🥃 Destilados</h3>
+                    <ul class="produtos-lista">
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Vodka Smirnoff</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="smirnoff" name="produto" value="smirnoff">
+                                        <label for="smirnoff">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Vodka premium russa, cristalina e suave</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 85,00</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">750ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Whisky Johnnie Walker Red Label</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="johnnie" name="produto" value="johnnie">
+                                        <label for="johnnie">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Whisky escocês blended, suave e acessível</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 120,00</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">750ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Gin Tanqueray</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="tanqueray" name="produto" value="tanqueray">
+                                        <label for="tanqueray">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Gin inglês premium com botânicos selecionados</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 95,00</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">750ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Rum Bacardi Carta Blanca</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="bacardi" name="produto" value="bacardi">
+                                        <label for="bacardi">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Rum branco cubano, leve e versátil</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 78,00</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">750ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Tequila Jose Cuervo</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="cuervo" name="produto" value="cuervo">
+                                        <label for="cuervo">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Tequila mexicana 100% agave azul</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 110,00</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">750ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Whisky Jack Daniel's</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="jack" name="produto" value="jack">
+                                        <label for="jack">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Whisky americano Tennessee, defumado</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 135,00</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">750ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Vodka Absolut</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="absolut" name="produto" value="absolut">
+                                        <label for="absolut">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Vodka sueca premium, puro trigo invernal</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 92,00</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">750ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Gin Hendrick's</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="hendricks" name="produto" value="hendricks">
+                                        <label for="hendricks">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Gin escocês com pepino e rosa</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 125,00</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">750ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="categoria" id="categoria-refrigerantes">
+                    <h3 class="categoria-titulo">🥤 Refrigerantes</h3>
+                    <ul class="produtos-lista">
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Coca-Cola</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="coca" name="produto" value="coca">
+                                        <label for="coca">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Refrigerante cola clássico, refrescante</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 4,50</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">350ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Pepsi</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="pepsi" name="produto" value="pepsi">
+                                        <label for="pepsi">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Refrigerante cola com sabor único</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 4,20</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">350ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Guaraná Antarctica</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="guarana" name="produto" value="guarana">
+                                        <label for="guarana">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Refrigerante brasileiro à base de guaraná</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 3,80</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">350ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Fanta Laranja</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="fanta" name="produto" value="fanta">
+                                        <label for="fanta">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Refrigerante de laranja com sabor intenso</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 4,00</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">350ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Sprite</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="sprite" name="produto" value="sprite">
+                                        <label for="sprite">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Refrigerante limão-lima, leve e refrescante</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 4,30</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">350ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Kuat</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="kuat" name="produto" value="kuat">
+                                        <label for="kuat">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Refrigerante de guaraná com cafeína extra</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 4,80</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">350ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="categoria" id="categoria-sucos">
+                    <h3 class="categoria-titulo">🧃 Sucos</h3>
+                    <ul class="produtos-lista">
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Suco de Laranja Natural</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="laranja" name="produto" value="laranja">
+                                        <label for="laranja">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Suco 100% natural de laranja</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 8,50</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">1L</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Suco de Uva Integral</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="uva" name="produto" value="uva">
+                                        <label for="uva">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Suco de uva com polpa, rico em antioxidantes</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 9,20</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">1L</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Suco de Maçã Verde</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="maca" name="produto" value="maca">
+                                        <label for="maca">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Suco refrescante de maçã verde</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 7,80</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">1L</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Suco de Acerola</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="acerola" name="produto" value="acerola">
+                                        <label for="acerola">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Suco rico em vitamina C, 100% natural</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 10,50</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">1L</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Suco de Goiaba</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="goiaba" name="produto" value="goiaba">
+                                        <label for="goiaba">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Suco tropical de goiaba, doce e refrescante</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 8,90</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">1L</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="categoria" id="categoria-aguas">
+                    <h3 class="categoria-titulo">💧 Águas</h3>
+                    <ul class="produtos-lista">
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Água Mineral Bonafont</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="bonafont" name="produto" value="bonafont">
+                                        <label for="bonafont">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Água mineral natural, pura e refrescante</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 2,50</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">500ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Água com Gás Perrier</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="perrier" name="produto" value="perrier">
+                                        <label for="perrier">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Água mineral gaseificada premium</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 6,80</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">500ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Água Crystal</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="crystal" name="produto" value="crystal">
+                                        <label for="crystal">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Água mineral brasileira de alta pureza</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 2,20</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">500ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Água Levíssima</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="levissima" name="produto" value="levissima">
+                                        <label for="levissima">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Água mineral com baixo teor de sódio</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 2,80</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">500ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="categoria" id="categoria-energeticos">
+                    <h3 class="categoria-titulo">⚡ Energéticos</h3>
+                    <ul class="produtos-lista">
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Red Bull Energy Drink</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="redbull" name="produto" value="redbull">
+                                        <label for="redbull">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Bebida energética com taurina e cafeína</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 8,90</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">250ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Monster Energy</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="monster" name="produto" value="monster">
+                                        <label for="monster">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Bebida energética com alto teor de cafeína</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 7,50</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">473ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Burn Energy Drink</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="burn" name="produto" value="burn">
+                                        <label for="burn">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Energético brasileiro com cafeína natural</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 6,50</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">250ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Red Bull Editions</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="fusions" name="produto" value="fusions">
+                                        <label for="fusions">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Versões especiais do Red Bull com sabores</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 9,50</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">250ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="categoria" id="categoria-outras">
+                    <h3 class="categoria-titulo">🥛 Outras Bebidas</h3>
+                    <ul class="produtos-lista">
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Chá Matte Leão</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="matte" name="produto" value="matte">
+                                        <label for="matte">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Chá mate gelado, refrescante e natural</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 3,20</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">310ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Achocolatado Toddy</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="toddy" name="produto" value="toddy">
+                                        <label for="toddy">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Achocolatado cremoso e delicioso</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 4,80</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">200ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Leite de Coco</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="coco" name="produto" value="coco">
+                                        <label for="coco">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Leite de coco natural, ideal para coquetéis</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 12,00</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">400ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Nescau</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="nescau" name="produto" value="nescau">
+                                        <label for="nescau">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Achocolatado em pó, fonte de energia</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 15,90</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">400g</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Tang</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="tang" name="produto" value="tang">
+                                        <label for="tang">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Refresco em pó de laranja</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 8,50</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">25g</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+
+                        <li class="produto-item">
+                            <article class="produto">
+                                <div class="produto-header">
+                                    <h4>Milk Shake MID</h4>
+                                    <div class="produto-selecao">
+                                        <input type="checkbox" id="mid" name="produto" value="mid">
+                                        <label for="mid">Selecionar</label>
+                                    </div>
+                                </div>
+                                <p class="produto-descricao">Milk shake pronto para beber</p>
+                                <dl class="produto-info">
+                                    <dt>Preço:</dt>
+                                    <dd class="preco">R$ 5,20</dd>
+                                    <dt>Volume:</dt>
+                                    <dd class="volume">200ml</dd>
+                                </dl>
+                                <button class="btn-comprar">Comprar</button>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="secao-cta">
+                    <h3>Pronto para finalizar?</h3>
+                    <p>Selecione os produtos desejados e clique no botão abaixo para continuar com seu pedido.</p>
+                    <button onclick="finalizarPedido()" class="btn-finalizar">Finalizar Pedido</button>
+                </section>
+            </div>
+        </section>
+
+        <section id="entrega" class="section-entrega">
+            <div class="container">
+                <h2>Informações de Distribuição</h2>
+
+                <ul class="info-distribuicao-lista">
+                    <li>
+                        <article class="info-card">
+                            <h3>🏭 Atacado</h3>
+                            <p>Compras acima de <strong>R$ 500,00</strong> recebem desconto especial de atacado.
+                                Condições diferenciadas para estabelecimentos comerciais.</p>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article class="info-card">
+                            <h3>🚚 Entrega Expressa</h3>
+                            <p><strong>Entrega em até 24 horas</strong> para região metropolitana de São Paulo.
+                                Atendemos todo o território nacional com nossos parceiros logísticos.</p>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article class="info-card">
+                            <h3>📦 Embalagem Profissional</h3>
+                            <p>Todos os produtos são embalados com <strong>cuidados especiais</strong> para transporte
+                                seguro. Utilizamos caixas reforçadas e isolamento térmico quando necessário.</p>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article class="info-card">
+                            <h3>📋 Pedidos Personalizados</h3>
+                            <p>Oferecemos <strong>pedidos personalizados</strong> para bares, restaurantes e eventos.
+                                Consulte nossas condições especiais para grandes volumes e entregas programadas.</p>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article class="info-card">
+                            <h3>💳 Formas de Pagamento</h3>
+                            <p>Aceitamos <strong>boleto bancário, cartão de crédito, PIX e transferência</strong>. Para
+                                clientes cadastrados, oferecemos condições especiais de pagamento.</p>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article class="info-card">
+                            <h3>🔒 Garantia de Qualidade</h3>
+                            <p>Todos os produtos possuem <strong>garantia de procedência</strong> e são armazenados em
+                                condições ideais. Trabalhamos apenas com fornecedores certificados e produtos dentro do
+                                prazo de validade.</p>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-info">
+                <p>&copy; 2026 DrunkFlow Distribuidora. Todos os direitos reservados.</p>
+                <p>CNPJ: 12.345.678/0001-90 | Inscrição Estadual: 123.456.789.012</p>
+            </div>
+            <nav aria-label="Redes sociais" class="footer-sociais">
+                <ul>
+                    <li><a href="https://facebook.com/drunkflow" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    </li>
+                    <li><a href="https://instagram.com/drunkflow.br" target="_blank"
+                            rel="noopener noreferrer">Instagram</a></li>
+                    <li><a href="https://twitter.com/drunkflowbr" target="_blank" rel="noopener noreferrer">Twitter</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        function finalizarPedido() {
+            const checkboxes = document.querySelectorAll('input[name="produto"]:checked');
+            const produtosSelecionados = Array.from(checkboxes).map(cb => cb.value);
+
+            if (produtosSelecionados.length === 0) {
+                alert('Por favor, selecione pelo menos um produto antes de finalizar o pedido.');
+                return;
+            }
+
+            let mensagem = 'Produtos selecionados:\n\n';
+            produtosSelecionados.forEach(produto => {
+                mensagem += '• ' + produto.charAt(0).toUpperCase() + produto.slice(1) + '\n';
+            });
+            mensagem += '\nTotal de produtos: ' + produtosSelecionados.length;
+
+            alert(mensagem + '\n\nEm breve você será redirecionado para finalizar seu pedido!');
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
