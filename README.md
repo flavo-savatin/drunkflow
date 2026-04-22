@@ -1,8 +1,6 @@
 # drunkflow
 # DrunkFlow - Distribuidora de Bebidas
 
-![DrunkFlow Logo](https://via.placeholder.com/150x50?text=DrunkFlow)
-
 Uma plataforma web moderna e responsiva para a distribuidora DrunkFlow, especializada em bebidas alcoólicas e não alcoólicas. O site oferece catálogo de produtos, carrinho de compras interativo, busca avançada e formulários de contato.
 
 ## 🚀 Funcionalidades
