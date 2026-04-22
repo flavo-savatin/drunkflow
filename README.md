@@ -19,5 +19,3 @@ Uma plataforma web moderna e responsiva para a distribuidora DrunkFlow, especial
 - **CSS3**: Estilos modernos com Flexbox, Grid e animações.
 - **JavaScript (ES6+)**: Interatividade, manipulação do DOM e localStorage para carrinho.
 - **SVG**: Ícones vetoriais para botões e navegação.
-
-## 📁 Estrutura do Projeto
